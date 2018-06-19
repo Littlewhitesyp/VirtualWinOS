@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="process_aligo">
+        <item>先来先服务（FCFS）</item>
+        <item>短作业优先（SJF）</item>
+        <item>时间片轮转（RR）</item>
+        <item>优先权调度算法</item>
+        <item>高响应比优先</item>
+    </string-array>
+
+    <string-array name="grab_or_not">
+        <item>非抢占式</item>
+        <item>抢占式</item>
+    </string-array>
+
+    <string-array name="memory_aligo">
+        <item>首次适应算法（First Fit）</item>
+        <item>循环首次应算法（Next Fit）</item>
+        <item>最佳适应（Best Fit）</item>
+        <item>最坏适应（Worst Fit）</item>
+    </string-array>
+</resources>

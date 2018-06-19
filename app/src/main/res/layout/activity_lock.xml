@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/mlock_background"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img0"
+    tools:context=".Activitys.lock"
+    android:onClick="mblock_back_click">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+        <TextClock
+            android:id="@+id/mtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:format24Hour="aa hh:mm"
+            android:layout_gravity="center"
+            android:textStyle="italic"/>
+
+        <TextClock
+            android:id="@+id/mdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:format24Hour="MM月dd日"
+            android:format12Hour="MM月dd日"
+            android:layout_gravity="center"
+            android:textStyle="italic"
+            />
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/power"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/power"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="power_button"/>
+    <LinearLayout
+        android:id="@+id/shutdown_anim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="正在关机..."
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+</RelativeLayout>
+

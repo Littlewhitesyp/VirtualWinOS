@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">VirtualWinOS</string>
+    <string name="myComputer_icon_name">我的电脑</string>
+    <string name="mycontrol_icon_name">控制面板</string>
+    <string name="managetaskname">任务管理</string>
+    <string name="process_show">进程调度演示区</string>
+    <string name="memory_show">内存管理演示区</string>
+    <string name="process_choose_aligo">进程调度算法</string>
+    <string name="grab_or_not">是否抢占</string>
+    <string name="current_process">当前</string>
+    <string name="finish_process">进度</string>
+    <string name="memory_aligo">内存分配算法</string>
+    <string name="Total_Memory">Total:100M Availab:100M</string>
+    <string name="pid">pid</string>
+    <string name="exetime">time(s)</string>
+    <string name="space">space(m)</string>
+    <string name="priority">priority</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="first_open_welcome">欢迎您的首次光临\n正在初始化配置......,请耐心等待</string>
+    <string name="default_description_memory">2240b可用 共10kb(10240b)</string>
+    <string name="remoteIp">远程桌面Ip</string>
+    <string name="Ok">确定</string>
+    <string name="remoteDeskTop">远程桌面</string>
+    <string name="permission">允许</string>
+    <string name="refuse">拒绝</string>
+</resources>

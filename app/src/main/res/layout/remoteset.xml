@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/computer"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/remoteIp"
+                android:gravity="center_vertical" />
+            <EditText
+                android:id="@+id/remoteIp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                android:textColor="@color/colorPrimary"/>
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/remoteOkButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:layout_gravity="right"
+            android:textColor="@color/xiangyabai"
+            android:text="@string/Ok"/>
+    </LinearLayout>
+     <android.support.design.widget.FloatingActionButton
+         android:id="@+id/linkanim"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center"
+         android:src="@drawable/link"
+         android:visibility="gone"
+         />
+</LinearLayout>
