@@ -549,7 +549,7 @@ public class Desktop extends AppCompatActivity{
                         }
                         break;
                     /**
-                     * 接收到请求后选择同意或者拒绝
+                     * 接收到请求后选择同意或者拒绝的对话框
                      */
                     case 345:
                         if(chooseForRequestDialog==null)
@@ -2663,12 +2663,13 @@ public class Desktop extends AppCompatActivity{
         remote_desktop = builder.create();
 
       // TODO: 2018/6/6 开启等待画面传输的线程
+
       if(receiveThread==null){
           receiveThread = new Thread(receiveRunnable);
-
+          receiveRunnableCanRun = true;
           receiveThread.start();
       }
-      receiveRunnableCanRun = true;
+
 
     }
 
@@ -2682,7 +2683,7 @@ public class Desktop extends AppCompatActivity{
           try {
               socketRequest = new Socket(InetAddressManager.ServerIp,6666);
               String message = "#IP="+InetAddressManager.getLocalIp()+"\n";
-
+              socketRequest.setSoTimeout(15*1000);  //设置超时15秒
               DataOutputStream dos = new DataOutputStream(socketRequest.getOutputStream());
               dos.write(message.getBytes(),0,message.getBytes().length);
               dos.flush();
@@ -2723,7 +2724,6 @@ public class Desktop extends AppCompatActivity{
               try {
 
                   socketRequest = serverSocketResponse.accept();
-                  Log.e("linked","haha");
                   String inputline = "";
                   BufferedReader br = new BufferedReader(new InputStreamReader(socketRequest.getInputStream()));
                   inputline = br.readLine();
@@ -2774,11 +2774,13 @@ public class Desktop extends AppCompatActivity{
             while(receiveRunnableCanRun){
                 try {
                     socket = serverSocket.accept();
+
                     DataInputStream dis = new DataInputStream(socket.getInputStream());
                     reveiveBitmap = BitmapFactory.decodeStream(dis);
                     mhandler.sendEmptyMessage(234);
                 } catch (IOException e) {
                     e.printStackTrace();
+                    Log.e("receive_error","接受发生错误");
                 }
 
             }
